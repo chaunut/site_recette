@@ -5,19 +5,21 @@
 body {
     background-color: #8BA1BB;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 p.categorie{
     text-align: center;
     background-color: black;
     color: white;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 18px;
     font-weight: bold;
     font-size: 16px;
     margin-top: -15px;
+    margin-bottom: 0px;
 }
 div.categorie{
-    margin-bottom: -30px;
+    margin-bottom: 0px;
     margin-top: 0px;
     overflow: visible;
 
@@ -25,14 +27,15 @@ div.categorie{
 div.contenu{
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
-    margin: 50px 10px 50px 10px;
-    padding: 0px 30px 30px 30px;
-    min-width: 350px;
+    margin: 40px 8px 40px 8px;
+    padding: 0px 8px 20px 8px;
     overflow: visible;
 
 }
 h1{
     text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
 }
 p.description{
     text-align: center;
@@ -61,28 +64,29 @@ table.info{
     position: absolute;
     color:white;
     width: 100%;
-    height: 10%;
+    height: 50px;
     bottom:0;
 }
 table.info td{
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
+    font-size: 12px;
 }
 table.info th{
-    text-align: center;
     vertical-align: bottom;
-    font-size: 16px;
+    font-size: 14px;
+    padding-bottom: 8px;
 }
 img.info{
     max-height: 400px;
     min-height: 200px;
     display: block;
     object-fit: cover;
+    background-color: lightgray;
 }
 div.colonne{
     margin-top: 20px;
-    width: 45%;
+    width: 100%;
 }
 
 div.colonne h2 {
@@ -93,22 +97,20 @@ div.colonne h2 {
     padding-bottom: 5px;
 }
 div.colonne1 {
-    margin-right: 10%;
     display: inline-block;
 
 }
 div.colonne2 {
-    float:right;
+    /*float:right;*/
 }
 
 div.ing p{
-    margin-bottom: 1px;
-    margin-top: 1px;
+    margin-bottom: 0px;
+    margin-top: 14px;
     text-align: center;
     color: lightgray;
     border: 1px solid lightgray;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 8px 0px;
     font-size: 14px;
 
 }
@@ -140,3 +142,44 @@ table.preparation td.etapes{
     padding-bottom: 10px;
 }
 
+/* pour les ordinateurs*/
+@media only screen and (min-width: 758px){
+    div.contenu{
+        min-width: 350px;
+        margin: 50px 10% 50px 10%;
+        padding: 0px 30px 30px 30px;
+    }
+    table.info{
+        height: 80px;
+    }
+    table.info td{
+        font-size: 14px;
+    }
+    table.info th{
+        font-size: 16px;
+    }
+    div.colonne{
+        margin-top: 20px;
+        width: 45%;
+    }
+    
+    div.colonne h2 {
+        font-size: 15px;
+        border-bottom: 5px solid #6C829D;
+        padding-bottom: 5px;
+    }
+    div.colonne1 {
+        margin-right: 10%;
+    }
+    div.colonne2 {
+        float:right;
+    }
+}
+
+/* pour les écrans très larges*/
+@media only screen and (min-width: 900px){
+    div.contenu{
+        margin: 50px auto 50px auto;
+        width: 645px;
+    }
+}
